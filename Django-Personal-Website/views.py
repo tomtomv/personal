@@ -7,6 +7,7 @@ from django.core.mail import send_mail, get_connection
 from django.conf import settings
 from .forms import ContactForm
 from .models import Project
+from pip._vendor.urllib3 import request
 
 
 class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
@@ -25,11 +26,12 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
         cd = form.cleaned_data
         con = get_connection(settings.EMAIL_BACKEND)
         send_mail(
-            cd['name'],
-            cd['message'],
+            "Nouveau message de " + cd['name'] + " du site tomtomv",
+            cd['name'] + " vous avez envoyé le message suivant: " + cd['message'] +". Son adresse email est: "+ cd['email'],
             cd.get('email', 'noreply@example.com'),
             ['t.vauzanges@gmail.com'],
             fail_silently=False
         )
+        
         return super(ProjectListAndFormView, self).form_valid(form)
         return render(request, "templates/contact_form.html", {'messages': messages})
