@@ -28,7 +28,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -133,8 +132,8 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = 't.vauzanges@gmail.com'
-EMAIL_HOST_PASSWORD = 'Maracass90,'
+EMAIL_HOST_USER = 'personaltomtomv@gmail.com'
+EMAIL_HOST_PASSWORD = 'carabistouille90'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
