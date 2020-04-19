@@ -131,9 +131,10 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 # For sending emails
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST_USER = 'ChrisRosales'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_USER = 't.vauzanges@gmail.com'
+EMAIL_HOST_PASSWORD = 'Maracass90,'
 EMAIL_PORT = 587
-SEND_GRID_API_KEY = ''
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

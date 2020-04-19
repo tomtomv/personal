@@ -5,10 +5,10 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
-autopep8 = "*"
+autopep8==1.5.1
 
 [packages]
-django = "*"
+Django==3.0.5
 pylint-django = "*"
 django-tastypie = "*"
 djang = "==2.1.7"
