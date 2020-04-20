@@ -1,5 +1,19 @@
 <form action="#contact" method="post" id="contact-form" role="form">
   <div class="ajax-hidden">
+      {% if form.errors %}
+        {% for field in form %}
+            {% for error in field.errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
     {% if messages %}
       <ul class="messages" style="list-style-type: none;color: red;text-align:center">
         {% for message in messages %}
@@ -15,7 +29,7 @@
         </div>
     {% endfor %}
      <div id="button">
-         <input id="submit" class="submit_button btn btn-lg btn-block wow fadeInUp" type="submit" value="SEND MESSAGE" />
+         <input id="submit" class="submit_button btn btn-lg btn-block wow fadeInUp" type="submit" value="Envoyer un message" />
      </div>
       </div>
   <div class="ajax-response"></div>
