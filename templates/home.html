@@ -20,13 +20,17 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Portfolio webpage">
 	<meta name="author" content="Chris Rosales">
-	<base href="/">
 
+	  <!-- Favicons -->
+ 	 <link href="{% static 'Django-Personal-Website/images/favicon.ico' %}" rel="icon">
+ 	 <link href="{% static 'Django-Personal-Website/images/favicon.ico' %}" rel="apple-touch-icon">
+
+	<!-- Vendor CSS Files -->
 	<link type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Raleway|Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
 	<link rel="shortcut icon" href="{% static 'Django-Personal-Website/images/updatedphoto.ico' %}" />
-	<title>Web Developer</title>
+	<title>tomtomv </title>
 
 	<!-- CSS -->
 	<link href="{% static 'Django-Personal-Website/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
@@ -52,9 +56,11 @@
 	<section id="home" class="pfblock-image screen-height">
     <div class="home-overlay"></div>
 		<div class="intro">
-			<div class="start">Hello, je m'appelle thomas Vauzanges et je suis</div>
-			<h1>Un petit geek qui découvre internet</h1>
-			<div class="start">changing the world one step at a time</div>
+			{% comment %} <div class="start">Hello, je m'appelle thomas Vauzanges et je suis</div> {% endcomment %}
+			{% comment %} <h1>Geet</h1> {% endcomment %}
+			<h1><a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I am Thomas.", "I am Creative.", "I Love Design.", "I Love to Develop." ]'>
+    		<span class="wrap"></span></a></h1>
+			<div class="start"> "Je n'ai pas de talents particuliers. Je suis juste passionnément curieux." Albert Einstein</div>
 		</div>
 
 		<a href="#services">
@@ -131,46 +137,24 @@
 					</div>
 				</div>
 		</div><!-- .container -->
+	</section>
 
-		<div class="skills col-xs-12">
-				<h2 class="pfblock-title">MY SKILLS</h2>
+	<section id="skill" class="pfblock">
+		<div class="container">	
+			<div class="skills col-xs-12">
+				<h2 class="pfblock-title">MES COMPÉTENCES EN DEV</h2>
 				<div class="pfblock-line"></div>
-
 				<div class="row">
 					<div  class="devicon-html5-plain  col-xs-15"><span>HTML</span></div>
 					<div  class="devicon-css3-plain   col-xs-15"><span>CSS</span></div>
 					<div  class="devicon-bootstrap-plain col-xs-15"><span>BOOTSTRAP</span></div>
-					<div  class="devicon-jquery-plain col-xs-15"><span>JQUERY</span></div>
-					<div  class="devicon-javascript-plain  col-xs-15"><span>JAVASCRIPT</span></div>
-				</div>
-				<div class="row">
-					<div  class="devicon-d3js-plain  col-xs-15"><span>D3</span></div>
-					<div  class="devicon-react-original  col-xs-15"><span>REACT</span></div>
-					<div  class="devicon-nodejs-plain  col-xs-15"><span>NODE</span></div>
 					<div  class="devicon-python-plain  col-xs-15"><span>PYTHON</span></div>
-					<div  class="devicon-django-plain  col-xs-15"><span>DJANGO</span></div>
-				</div>
-				<div class="row">
-					<div  class="devicon-d3js-plain  col-xs-15"><span>D3</span></div>
-					<div  class="devicon-react-original  col-xs-15"><span>REACT</span></div>
-					<div  class="devicon-nodejs-plain  col-xs-15"><span>NODE</span></div>
-					<div  class="devicon-python-plain  col-xs-15"><span>PYTHON</span></div>
-					<div  class="devicon-django-plain  col-xs-15"><span>DJANGO</span></div>
-				</div>
-				<div class="row">
-					<div  class="devicon-d3js-plain  col-xs-15"><span>D3</span></div>
-					<div  class="devicon-react-original  col-xs-15"><span>REACT</span></div>
-					<div  class="devicon-nodejs-plain  col-xs-15"><span>NODE</span></div>
-					<div  class="devicon-python-plain  col-xs-15"><span>PYTHON</span></div>
-					<div  class="devicon-django-plain  col-xs-15"><span>DJANGO</span></div>
+					<div  class="devicon-django-plain  col-xs-15"><span>DJANGO</span></div>			
 				</div>
 			</div>
 		</div>
-		
 	</section>
-	<section>
-	
-	</section>
+
 
 	<!-- Services end -->
 
@@ -184,7 +168,7 @@
 				<div class="col-sm-6 col-sm-offset-3">
 
 					<div class="pfblock-header wow fadeInUp">
-						<h2 class="pfblock-title">My works</h2>
+						<h2 class="pfblock-title">Mes projets</h2>
 						<div class="pfblock-line"></div>
 						<div class="pfblock-subtitle">
 
@@ -308,16 +292,20 @@
 
 	<!-- Javascript files -->
 
-	<script src="{% static 'Django-Personal-Website/js/jquery-1.11.1.min.js' %}"></script>
+	{% comment %} <script src="{% static 'Django-Personal-Website/js/jquery-1.11.1.min.js' %}"></script> {% endcomment %}
+	<script src="{% static 'Django-Personal-Website/js/jquery-2.1.3.min.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/bootstrap/js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/jquery.parallax-1.1.3.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/imagesloaded.pkgd.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/jquery.sticky.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/smoothscroll.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/wow.min.js' %}"></script>
-  <script src="{% static 'Django-Personal-Website/js/waypoints.min.js' %}"></script>
-  <script src="{% static 'Django-Personal-Website/js/jquery.cbpQTRotator.js' %}"></script>
+ 	<script src="{% static 'Django-Personal-Website/js/waypoints.min.js' %}"></script>
+ 	<script src="{% static 'Django-Personal-Website/js/jquery.cbpQTRotator.js' %}"></script>
 	<script src="{% static 'Django-Personal-Website/js/custom.js' %}"></script>
+	<script src="{% static 'Django-Personal-Website/js/jquery.counterup.js' %}"></script>
+	<script src="{% static 'Django-Personal-Website/js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'Django-Personal-Website/js/tywriter.js' %}"></script>
 
 </body>
 </html>
