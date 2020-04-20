@@ -21,6 +21,7 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
     success_url = '/'  # After submiting the form keep staying on the same url
     success_message = 'Your Form has been successfully submitted!'
 
+
     def form_valid(self, form):
         # This method is called when valid form data has been POSTed.
         cd = form.cleaned_data
@@ -35,3 +36,5 @@ class ProjectListAndFormView(SuccessMessageMixin, ListView, FormView):
         
         return super(ProjectListAndFormView, self).form_valid(form)
         return render(request, "templates/contact_form.html", {'messages': messages})
+
+
